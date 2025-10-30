@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritu Raj Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom CSS for a clean, professional look */
+        :root {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1f2937; /* Dark Gray */
+            background-color: #f9fafb; /* Light Gray Background */
+        }
+        .section-header {
+            font-weight: 700;
+            color: #1E40AF; /* Deep Blue */
+            border-bottom: 3px solid #BFDBFE; /* Light accent line */
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .nav-link:hover {
+            color: #BFDBFE; /* Light Blue on hover */
+            background-color: #1e40af; /* Deep Blue background */
+        }
+        .contact-button {
+            transition: all 0.3s ease;
+        }
+        .contact-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(30, 64, 175, 0.4);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#1E40AF',
+                        'accent-light': '#BFDBFE',
+                        'dark-gray': '#1f2937',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased">
+
+    <!-- Sticky Navigation Header -->
+    <header class="sticky top-0 z-50 bg-primary-blue shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo/Name -->
+                <div class="flex-shrink-0">
+                    <a href="#hero" class="text-xl font-bold text-white tracking-wide">
+                        Ritu Raj
+                    </a>
+                </div>
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about" class="nav-link text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#education" class="nav-link text-white px-3 py-2 rounded-md text-sm font-medium">Education</a>
+                        <a href="#skills" class="nav-link text-white px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#contact" class="nav-link text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-primary-blue hover:text-accent-light focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-light">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-primary-blue">
+                <a href="#about" class="mobile-nav-link block text-white hover:bg-primary-blue hover:text-accent-light px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#education" class="mobile-nav-link block text-white hover:bg-primary-blue hover:text-accent-light px-3 py-2 rounded-md text-base font-medium">Experience</a>
+                <a href="#skills" class="mobile-nav-link block text-white hover:bg-primary-blue hover:text-accent-light px-3 py-2 rounded-md text-base font-medium">Skills</a>
+                <a href="#contact" class="mobile-nav-link block text-white hover:bg-primary-blue hover:text-accent-light px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="hero" class="bg-white py-16 sm:py-24 border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+                <!-- Profile Image -->
+                <div class="flex-shrink-0">
+                    <img class="h-64 w-64 md:h-80 md:w-80 rounded-full object-cover shadow-2xl border-4 border-primary-blue" 
+                         src="P1'.jpg" 
+                         alt="Ritu Raj">
+                </div>
+                <!-- Text Content -->
+                <div class="text-center md:text-left">
+                    <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight text-dark-gray leading-tight">
+                        Ritu Raj
+                    </h1>
+                    <h2 class="mt-2 text-2xl sm:text-3xl text-gray-600 font-light">
+                        Law Student At <span class="font-medium text-primary-blue">School of Law,Justice & Governance (GBU)</span>
+                    </h2>
+                    <p class="mt-6 text-lg text-gray-700 max-w-xl">
+                        Committed and detail-oriented student lawyer with proven analytical skills and a dedication to
+                        <span class="font-semibold">Criminal Law</span> and <span class="font-semibold">Constitutional Litigation</span>.
+                        Seeking opportunities to apply rigorous legal research and drafting expertise.
+                    </p>
+                    <div class="mt-8 flex justify-center md:justify-start space-x-4">
+                        <a href="#contact" class="px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-primary-blue shadow-md contact-button">
+                            Get In Touch
+                        </a>
+                        <a href="https://www.linkedin.com/in/ritu-raj-bab669384/" target="_blank" class="px-6 py-3 border border-primary-blue text-base font-medium rounded-lg text-primary-blue bg-white hover:bg-accent-light transition duration-150 ease-in-out shadow-md">
+                            View LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. About Me Section -->
+        <section id="about" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl section-header inline-block">About Me</h2>
+                <div class="mt-6 text-lg text-gray-700 leading-relaxed">
+                    <p class="mb-4">
+                       I am a first-year B.A. LL.B. student at Gautam Buddha University, with a keen interest in criminal law and civil law. My academic journey is driven by a passion for understanding the complexities of the legal system and developing strong advocacy skills. I aspire to build a career as a dedicated lawyer, committed to upholding justice and contributing meaningfully to society through legal practice.
+                    </p>
+                    <p>
+                        Though I am a fresher, I actively seek out opportunities to apply classroom knowledge. I have participated in consistently volunteer for legal aid clinics, focusing on bridging the gap between theoretical law and practical societal impact. I possess a strong foundation in foundational legal principles and am proficient in advanced research techniques using both digital and traditional libraries.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Experience & Education Section -->
+        <section id="education" class="py-16 sm:py-24 bg-gray-50 border-t border-b border-gray-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl section-header inline-block">Education</h2>
+
+                <div class="space-y-12">
+                    <!-- Experience Item 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+                            <h3 class="text-xl font-bold text-primary-blue">Om Prakash Verma High School</h3>
+                            <span class="text-sm font-medium text-gray-500 mt-1 sm:mt-0">Mar 2022 – May 2024</span>
+                        </div>
+                        <p class="text-lg font-semibold text-dark-gray">Class XII</p>
+                        <ul class="list-disc list-inside mt-3 text-gray-700 space-y-1 ml-4">
+                        <li><span class="font-medium">Subjects: </span>Economics, History, Geography, Hindi & English.</li>
+                         <li><span class="font-medium">Activities: </span>House Captain, Used to organise many events in the school such as Teachers day, Sports Day, Interschool Championships, & Assisting teachers in their work while class.</li>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
+                            <h3 class="text-xl font-bold text-primary-blue">School of Law,Justice & Governance (GBU)</h3>
+                            <span class="text-sm font-medium text-gray-500 mt-1 sm:mt-0">Aug 2025 - Jun 2030</span>
+                        </div>
+                        <p class="text-lg font-semibold text-dark-gray">B.A. LL.B</p>
+                        <ul class="list-disc list-inside mt-3 text-gray-700 space-y-1 ml-4">
+                            <li><span class="font-medium">Subjects: </span>Legal Methods, Economics, Law of TORT, Politics, English & Sociology.</li>
+                            <li><span class="font-medium">Activities: </span>Active Member of LAC, Moot Court, NSS & Anti Drug And Ragging Committee.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Skills Section -->
+        <section id="skills" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl section-header inline-block">Key Skills</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
+                    <!-- Skill Card 1: Research -->
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-md border-t-4 border-primary-blue">
+                        <h3 class="text-xl font-bold text-dark-gray mb-3 flex items-center">
+                            <svg class="w-6 h-6 mr-2 text-primary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                            Legal Research
+                        </h3>
+                        <p class="text-gray-700">Expert proficiency in Westlaw, LexisNexis, Bloomberg Law, and primary source identification across federal and state jurisdictions.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="text-xs font-semibold inline-block py-1 px-3 rounded-full bg-accent-light text-primary-blue">Westlaw Certified</span>
+                            <span class="text-xs font-semibold inline-block py-1 px-3 rounded-full bg-accent-light text-primary-blue">Statutory Analysis</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 2: Drafting -->
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-md border-t-4 border-primary-blue">
+                        <h3 class="text-xl font-bold text-dark-gray mb-3 flex items-center">
+                            <svg class="w-6 h-6 mr-2 text-primary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                            Drafting & Writing
+                        </h3>
+                        <p class="text-gray-700">Skilled in preparing briefs, motions, client memos, contracts, and scholarly articles with adherence to Bluebook citation.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="text-xs font-semibold inline-block py-1 px-3 rounded-full bg-accent-light text-primary-blue">Bluebook Proficient</span>
+                            <span class="text-xs font-semibold inline-block py-1 px-3 rounded-full bg-accent-light text-primary-blue">Persuasive Advocacy</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 3: Soft Skills/Tech -->
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-md border-t-4 border-primary-blue">
+                        <h3 class="text-xl font-bold text-dark-gray mb-3 flex items-center">
+                            <svg class="w-6 h-6 mr-2 text-primary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            Cinematography & Visuals
+                        </h3>
+                        <p class="text-gray-700">Strong oral argument skills, meticulous attention to detail, time management, and proficiency in MS Office suite.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="text-xs font-semibold inline-block py-1 px-3 rounded-full bg-accent-light text-primary-blue">Moot Court Winner</span>
+                            <span class="text-xs font-semibold inline-block py-1 px-3 rounded-full bg-accent-light text-primary-blue">Case Management</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-md border-t-4 border-primary-blue">
+                        <h3 class="text-xl font-bold text-dark-gray mb-3 flex items-center">
+                            <svg class="w-6 h-6 mr-2 text-primary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            Editor
+                        </h3>
+                        <p class="text-gray-700">Strong oral argument skills, meticulous attention to detail, time management, and proficiency in MS Office suite.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="text-xs font-semibold inline-block py-1 px-3 rounded-full bg-accent-light text-primary-blue">Moot Court Winner</span>
+                            <span class="text-xs font-semibold inline-block py-1 px-3 rounded-full bg-accent-light text-primary-blue">Case Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Contact Section -->
+        <section id="contact" class="py-16 sm:py-24 bg-gray-50 border-t border-gray-200">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl section-header text-center inline-block w-full">Contact Me</h2>
+
+                <div class="mt-8 bg-white p-8 rounded-xl shadow-2xl">
+                    <p class="text-center text-lg text-gray-700 mb-6">
+                        I am actively seeking internship opportunities starting 2025. Feel free to connect directly
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <!-- Email Link -->
+                            <a href="mailto:riturajx1728@gmail.com" class="flex-1 px-4 py-3 bg-primary-blue text-white rounded-lg text-center font-medium shadow-md contact-button">
+                                Email: riturajx1728@gmail.com
+                            </a>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <!-- Phone Link -->
+                            <a href="tel:+919508791277" class="flex-1 px-4 py-3 bg-gray-200 text-dark-gray rounded-lg text-center font-medium hover:bg-gray-300 transition duration-150">
+                                Phone: 9508791277
+                            </a>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <!-- LinkedIn Link -->
+                            <a href="https://www.linkedin.com/in/ritu-raj-bab669384/" target="_blank" class="flex-1 px-4 py-3 bg-primary-blue text-white rounded-lg text-center font-medium shadow-md contact-button">
+                                View Full Profile on LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary-blue py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white text-sm">
+            &copy; 2025 Ritu Raj. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Smooth Scrolling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+            // Toggle mobile menu visibility
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
